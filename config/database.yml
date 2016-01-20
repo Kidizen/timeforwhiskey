@@ -3,6 +3,7 @@ development: &development
   encoding: unicode
   adapter: postgresql
   pool: 30
+  prepared_statements: false
 
 test:
   <<: *development
