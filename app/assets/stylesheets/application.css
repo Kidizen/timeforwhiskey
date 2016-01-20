@@ -31,10 +31,18 @@
     height: 100vh;
 }
 
+.center.success {
+    background: #47b800;
+}
+
 h1 {
     font-size: 15vw;
     width: 100%;
     text-align: center;
+}
+
+.success h1, .success h2 {
+    color: #FFF;
 }
 
 h2 {

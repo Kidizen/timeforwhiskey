@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Time for Whiskey?</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,9 +11,11 @@
     poll = function() {
       $.ajax("/sales").done(function(response) {
         var sales = Number(response.total) || 0;
-        if (sales >= 5000) {
+        if (sales >= 6000) {
+            $(".center").addClass('success');
             $("h1").html("Yes!");
         } else {
+            $(".center").removeClass('success');
             $("h1").html("Not yet.");
         }
 
