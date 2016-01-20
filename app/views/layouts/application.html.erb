@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time for Whiskey?</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    poll = function() {
+      $.ajax("/sales").done(function(response) {
+        var sales = Number(response.total) || 0;
+        if (sales >= 5000) {
+            $("h1").html("Yes!");
+        } else {
+            $("h1").html("Not yet.");
+        }
+
+        $("h2").html("$" + sales);
+      }).complete(function() {
+        setTimeout(poll, 5000);
+      });
+    };
+    poll();
+
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
