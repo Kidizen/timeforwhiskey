@@ -1,11 +1,7 @@
 development: &development
-  host: <%= ENV['APP_USER_POSTGRES_HOST'] %>
-  username: <%= ENV['APP_USER_POSTGRES_USERNAME'] %>
-  password: <%= ENV['APP_USER_POSTGRES_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
   adapter: postgresql
-  database: <%= ENV['APP_USER_POSTGRES_DATABASE'] %>
-  port: <%= ENV['APP_USER_POSTGRES_PORT'] %>
   pool: 30
 
 test:
