@@ -19,7 +19,9 @@
             $("h1").html("Not yet.");
         }
 
-        $("h2").html("$" + sales);
+        var formattedSales = "$" + sales;
+        $("h2").html(formattedSales);
+        document.title = formattedSales;
       }).complete(function() {
         setTimeout(poll, 5000);
       });

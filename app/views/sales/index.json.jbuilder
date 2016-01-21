@@ -1,1 +1,2 @@
-json.total @sales
+json.total @sales['total']
+json.success @sales['success']
