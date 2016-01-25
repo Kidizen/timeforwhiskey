@@ -10,7 +10,7 @@ class SalesController < ApplicationController
     total = res[0]['total']
     @sales = {
         "total" => total,
-        "success" => (total.to_f >= 6000)
+        "success" => (total.to_f >= 7000)
     }
   end
 

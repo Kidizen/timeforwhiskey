@@ -11,7 +11,7 @@
     poll = function() {
       $.ajax("/sales").done(function(response) {
         var sales = Number(response.total) || 0;
-        if (sales >= 6000) {
+        if (response.success) {
             $(".center").addClass('success');
             $("h1").html("Yes!");
         } else {
