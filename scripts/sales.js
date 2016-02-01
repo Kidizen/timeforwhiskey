@@ -15,7 +15,7 @@ module.exports = function(robot) {
                 if (!err && body) {
                     body = JSON.parse(body);
                     if (body.success) {
-                        reply.send('Yes! :whiskey');
+                        reply.send('Yes! :whiskey:');
                     } else {
                         reply.send('Not yet. ($' + body.total  + ')');
                     }
