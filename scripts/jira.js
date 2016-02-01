@@ -70,7 +70,7 @@ module.exports = function(robot) {
         }
 
         if (rawComponent === 'baseservice') {
-            component = 'BaseService';
+            component = 'Base Service';
         } else if (rawComponent === 'ios') {
             component = 'iOS';
         } else if (rawComponent === 'android') {
