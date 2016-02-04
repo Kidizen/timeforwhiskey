@@ -12,7 +12,7 @@ class SalesController < ApplicationController
         "total" => total,
         "ios" => res[0]['ios'],
         "android" => res[0]['android'],
-        "success" => (total.to_f >= 7000)
+        "success" => (total.to_f >= 8000)
     }
   end
 
