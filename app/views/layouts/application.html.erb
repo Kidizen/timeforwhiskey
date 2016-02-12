@@ -19,7 +19,7 @@
             $("h1").html("Not yet.");
         }
 
-        var formattedSales = "$" + sales;
+        var formattedSales = "$" + parseFloat(sales).toFixed(2);
         $("h2").html(formattedSales);
         document.title = formattedSales;
       }).complete(function() {
