@@ -75,6 +75,8 @@ module.exports = function(robot) {
             component = 'iOS';
         } else if (rawComponent === 'android') {
             component = 'Android';
+        } else if (rawComponent === 'design') {
+            component = 'Design';
         }
 
         if (!component) {
