@@ -58,7 +58,7 @@ module.exports = function(robot) {
         var rawComponent = (reply.match[2] || '').toLowerCase().trim();
         var text = (reply.match[3] || '').toLowerCase().trim();
 
-        var DIRECTIONS = '\n\nTry: _kidbot create `bug|story` for `baseservice|ios|android|design` your description goes here_\n\n';
+        var DIRECTIONS = ' Try:\n_kidbot create `bug|story` for `baseservice|ios|android|design` your description goes here_\n\n';
 
         if (rawType === 'story') {
             type = 'Story';
@@ -67,7 +67,7 @@ module.exports = function(robot) {
         }
 
         if (!type) {
-            reply.send("Sorry, I don't know how to create a '" + rawType + "'" + DIRECTIONS);
+            reply.send("Sorry, I don't know how to create a '" + rawType + "'." + DIRECTIONS);
             return;
         }
 
@@ -82,7 +82,7 @@ module.exports = function(robot) {
         }
 
         if (!component) {
-            reply.send("Sorry, I don't know the component '" + rawComponent + "'" + DIRECTIONS);
+            reply.send("Sorry, I don't know the component '" + rawComponent + "'." + DIRECTIONS);
             return;
         }
 
