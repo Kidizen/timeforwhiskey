@@ -58,7 +58,7 @@ module.exports = function(robot) {
         var rawComponent = (reply.match[2] || '').toLowerCase().trim();
         var text = (reply.match[3] || '').toLowerCase().trim();
 
-        var DIRECTIONS = '\n\nTry the following:\n\n"kidbot create `bug|story` for `baseservice|ios|android|design` `your description`"\n\n';
+        var DIRECTIONS = '\n\nTry: _kidbot create `bug|story` for `baseservice|ios|android|design` your description goes here_\n\n';
 
         if (rawType === 'story') {
             type = 'Story';
