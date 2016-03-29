@@ -19,12 +19,9 @@ module.exports = function(robot) {
         }
     }
 
-    function calcPercent(str1, str2) {
+    function toPercent(str1) {
         try {
-            x = parseFloat(str1)
-            y = parseFloat(str2)
-            return Math.floor((x / y) * 100) + '%'
-            //return parseFloat(str) * 100 + '%';
+            return parseFloat(str).format(2) * 100 + '%';
         } catch(e) {
             return '0.0%';
         }
@@ -63,7 +60,7 @@ module.exports = function(robot) {
                 res = res || {};
                 if (!err && body) {
                     body = JSON.parse(body);
-                    reply.send(toMoney(body.total) + ' (:ios: ' + toMoney(body.ios) + ', :android: ' + toMoney(body.android) + '; :kidbucks: ' + toMoney(body.kidbucks) + ' or ' + calcPercent(body.kidbucks, body.total) + ')');
+                    reply.send(toMoney(body.total) + ' (:ios: ' + toMoney(body.ios) + ', :android: ' + toMoney(body.android) + '; :kidbucks: ' + toMoney(body.kidbucks) + ' or ' + toPercent(body.kidbucks_percent) + ')');
                 }
             });
     });
