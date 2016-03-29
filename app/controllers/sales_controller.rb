@@ -25,11 +25,13 @@ class SalesController < ApplicationController
           "ios" => res[0]['ios'],
           "android" => res[0]['android'],
           "kidbucks" => res[0]['kidbucks'],
-          "kb_percent" => res[0]['kidbucks_percent'].to_f,
+          "kb_percent" => res[0]['kidbucks_percent'].to_s,
           "success" => (total.to_f >= 8000)
       }
-      console.log(res[0]['kidbucks_percent'].to_f)      
-      console.log(res[0]['kidbucks_percent'])
+      Rails.logger.error("res[0]['kidbucks_percent']: " + res[0]['kidbucks_percent'])
+      Rails.logger.error("res[0]['kidbucks_percent'].to_f: " + res[0]['kidbucks_percent'].to_f)
+      Rails.logger.error("res[0]['kidbucks_percent'].to_s: " + res[0]['kidbucks_percent'].to_s)
+      Rails.logger.error("response: " + res)
     end
 
     @@sales
