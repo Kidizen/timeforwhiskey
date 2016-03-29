@@ -1,6 +1,6 @@
 json.total @sales['total']
 json.ios @sales['ios']
 json.android @sales['android']
-json.android @sales['kidbucks']
-json.android @sales['kidbucks_percent']
+json.kidbucks @sales['kidbucks']
+json.kidbucks_percent @sales['kidbucks_percent']
 json.success @sales['success']
