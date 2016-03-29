@@ -19,6 +19,14 @@ module.exports = function(robot) {
         }
     }
 
+    function toPercent(str) {
+        try {
+            return parseFloat(str) * 100 + '%';
+        } catch(e) {
+            return '0.0%';
+        }
+    }
+
     function timeForWhiskey(reply) {
         robot.http('http://timeforwhiskey.kidizen.com/sales')
             .header('Authorization', 'Basic ' + getTimeForWhiskeyAuth())
@@ -52,7 +60,7 @@ module.exports = function(robot) {
                 res = res || {};
                 if (!err && body) {
                     body = JSON.parse(body);
-                    reply.send(toMoney(body.total) + ' (:ios: ' + toMoney(body.ios) + ', :android: ' + toMoney(body.android) + ')');
+                    reply.send(toMoney(body.total) + ' (:ios: ' + toMoney(body.ios) + ', :android: ' + toMoney(body.android) + '; :kidbucks: ' + toMoney(body.kidbucks) + ' or ' + toPercent(body.kidbucks_percent) + ')');
                 }
             });
     });
