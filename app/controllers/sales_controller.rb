@@ -25,9 +25,11 @@ class SalesController < ApplicationController
           "ios" => res[0]['ios'],
           "android" => res[0]['android'],
           "kidbucks" => res[0]['kidbucks'],
-          "kb_percent" => res[0]['kidbucks_percent'],
+          "kb_percent" => res[0]['kidbucks_percent'].to_f,
           "success" => (total.to_f >= 8000)
       }
+      console.log(res[0]['kidbucks_percent'].to_f)      
+      console.log(res[0]['kidbucks_percent'])
     end
 
     @@sales
