@@ -21,7 +21,7 @@ module.exports = function(robot) {
 
     function toPercent(str1) {
         try {
-            return parseFloat(str).format(2) * 100 + '%';
+            return Math.round(parseFloat(str) * 100) + '%';
         } catch(e) {
             return '0.0%';
         }
