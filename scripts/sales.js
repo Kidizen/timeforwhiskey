@@ -19,7 +19,7 @@ module.exports = function(robot) {
         }
     }
 
-    function toPercent(str1) {
+    function toPercent(str) {
         try {
             return Math.round(parseFloat(str) * 100) + '%';
         } catch(e) {
