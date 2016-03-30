@@ -23,7 +23,7 @@ module.exports = function(robot) {
         try {
             return Math.round(parseFloat(str) * 100) + '%';
         } catch(e) {
-            return '0.0%';
+            return e.message;
         }
     }
 
