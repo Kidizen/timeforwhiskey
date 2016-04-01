@@ -4,11 +4,11 @@ module.exports = function(robot) {
     var ANDROID_VERSION = '3.16.723';
 
     function androidVerion(reply) {
-        robot.send(ANDROID_VERSION);
+        reply.send(ANDROID_VERSION);
     }
 
     function iOSVerion(reply) {
-        robot.sent(IOS_VERSION);
+        reply.send(IOS_VERSION);
     }
 
     robot.hear(/what is the .* android version.*/i, function(reply) {
