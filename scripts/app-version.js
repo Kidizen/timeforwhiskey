@@ -1,7 +1,7 @@
 module.exports = function(robot) {
 
     var IOS_VERSION = '4.3.16';
-    var ANDROID_VERSION = '3.16.723';
+    var ANDROID_VERSION = '3.18.730';
 
     function androidVersion(reply) {
         reply.send(ANDROID_VERSION);
