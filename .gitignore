@@ -17,9 +17,7 @@
 /log/*
 !/log/.keep
 /tmp
-=======
 node_modules
 .DS_Store*
 .hubot_history
 *~
->>>>>>> a9d3e3ee105c86da3206690c57eacf3468e47ee0
