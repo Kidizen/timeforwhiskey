@@ -32,7 +32,7 @@ class SalesController < ApplicationController
           "ios_percent" => res[0]['ios_percent'],
           "android_percent" => res[0]['android_percent'],          
           "kidbucks_percent" => res[0]['kidbucks_percent'],
-          "success" => (total.to_f >= 9000)
+          "success" => (total.to_f >= 10000)
       }
     end
 
