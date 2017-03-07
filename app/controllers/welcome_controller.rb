@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  http_basic_authenticate_with name: "kidizen", password: "itzn1212"
+  http_basic_authenticate_with name: ENV['WEBSITE_USERNAME'], password: ENV['WEBSITE_PASSWORD']
   def index
   end
 end

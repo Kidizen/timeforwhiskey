@@ -1,7 +1,7 @@
 require "time"
 
 class SalesController < ApplicationController
-  http_basic_authenticate_with name: "kidizen", password: "itzn1212"
+  http_basic_authenticate_with name: ENV['WEBSITE_USERNAME'], password: ENV['WEBSITE_PASSWORD']
   respond_to :json
 
   @@sales = {}
@@ -27,10 +27,10 @@ class SalesController < ApplicationController
           "ios" => res[0]['ios'],
           "android" => res[0]['android'],
           "kidbucks" => res[0]['kidbucks'],
-          "selfship" => res[0]['selfship'],   
-          "ppl" => res[0]['ppl'],                    
+          "selfship" => res[0]['selfship'],
+          "ppl" => res[0]['ppl'],
           "ios_percent" => res[0]['ios_percent'],
-          "android_percent" => res[0]['android_percent'],          
+          "android_percent" => res[0]['android_percent'],
           "kidbucks_percent" => res[0]['kidbucks_percent'],
           "success" => (total.to_f >= 10000)
       }
