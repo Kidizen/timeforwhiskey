@@ -49,4 +49,4 @@ end
 # for Heroku
 gem 'rails_12factor', group: :production
 
-ruby "2.2.3"
+ruby "2.6.6"
